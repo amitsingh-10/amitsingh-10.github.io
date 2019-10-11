@@ -1,0 +1,19 @@
+{
+    "name" : "Amit",
+    "type" : "record",
+    "namespace" : "Gurgaon.Amit",
+    "fields" : [
+        {
+            "name" : "_id",
+            "type" : "record",
+            "class" : "_id",
+            "fields" : [
+                {
+                    "name" : "oid",
+                    "type" : "string",
+                    "default" : "null"
+                }
+            ]
+        }
+    ]
+}

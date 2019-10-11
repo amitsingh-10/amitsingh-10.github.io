@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>AVRO Generator for Mongo</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/Queue.js"></script>
+    <script src="../js/index.js"></script>
+</head>
+
+<body>
+    <form id="avro_creator">
+        <label> Collection name : </label>
+        <input id="collection_name" type="text" placeholder="Enter name of collection" autocomplete="off" autofocus>
+        <label> Database name : </label>
+        <input id="database_name" type="text" placeholder="Enter name of database">
+        <label> Name of element: </label>
+        <input id="element_name" type="text" placeholder="Enter name of element" autocomplete="off" 
+            required />
+        <label> Name of class : </label>
+        <select id="namespace" class="namespace_selector" autocomplete="off" required>
+            <!-- TODO : Replace by value we get from form submit -->
+        </select>
+        <div class="type_container">
+            <label> Type of element : </label>
+            <select id="main_selector" class="type_selector namespace_selector" autocomplete="off" required>
+                <option value="default" selected disabled hidden>Choose type</option>
+                <option value="uuid">Id</option>
+                <option value="boolean">Boolean</option>
+                <option value="int32">Int32</option>
+                <option value="int64">Long</option>
+                <option value="float">Float or Double</option>
+                <option value="date">Date</option>
+                <option value="string">String</option>
+                <option value="array">Array</option>
+                <option value="map">Map</option>
+                <option value="record">New class</option>
+            </select>
+        </div>
+        <button type="submit" id="add_element">Add Element</button>
+        <button type="reset" id="reset">Reset</button>
+        <button type="button" id="resetAvro">Reset AVRO</button>
+        <button type="button" id="resetClass">Reset Class</button>
+        <button type="button" id="inferAvro">Infer AVRO</button>    
+    </form>
+    <textarea name="generated_avro" id="generated_avro" cols="100" rows="50" style="resize:none;"></textarea>
+</body>
+
+</html>
