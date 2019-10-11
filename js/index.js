@@ -347,7 +347,7 @@ $(document).ready(function () {
 
     // Restore all options' availability and select first of them
     $("select.type_selector option").prop("disabled", false);
-    $("#namespace").val($("#namespace option:first").val());
+    //$("#namespace").val($("#namespace option:first").val());
   }
 
   // Event listeners

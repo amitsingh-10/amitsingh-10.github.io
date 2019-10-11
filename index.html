@@ -6,21 +6,37 @@
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/Queue.js"></script>
     <script src="js/index.js"></script>
+    <link type="stylesheet" href="css/reset.css" />
 </head>
 
 <body>
+    <p>
+    Steps
+    <ol>
+	    <li>Click on collection name and database name and click on 'Reset AVRO'.</li>
+	    <li>Choose name of element, name of class and type of element.</li>
+    <li>Repeat 2, till end.</li>
+    </ol>
+
+    <em>NOTE : Do not use Infer AVRO. It's a work in progress.</em>
+    </p>
+
     <form id="avro_creator">
         <label> Collection name : </label>
         <input id="collection_name" type="text" placeholder="Enter name of collection" autocomplete="off" autofocus>
+	<br>
         <label> Database name : </label>
         <input id="database_name" type="text" placeholder="Enter name of database">
+	<br>
         <label> Name of element: </label>
         <input id="element_name" type="text" placeholder="Enter name of element" autocomplete="off" 
             required />
+	<br>
         <label> Name of class : </label>
         <select id="namespace" class="namespace_selector" autocomplete="off" required>
             <!-- TODO : Replace by value we get from form submit -->
         </select>
+	<br>
         <div class="type_container">
             <label> Type of element : </label>
             <select id="main_selector" class="type_selector namespace_selector" autocomplete="off" required>
@@ -37,6 +53,7 @@
                 <option value="record">New class</option>
             </select>
         </div>
+	<br>
         <button type="submit" id="add_element">Add Element</button>
         <button type="reset" id="reset">Reset</button>
         <button type="button" id="resetAvro">Reset AVRO</button>
