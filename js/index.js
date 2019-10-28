@@ -237,7 +237,7 @@ $(document).ready(function () {
             else if ( child_elem["type"].constructor == Object )
               child_elem = child_elem["type"];
           }
-          elem["type"][1]["items"].push(child_elem);
+          elem["type"][1]["values"].push(child_elem);
           return elem;
         case "record":
           var elem = createRecordElement(element_name, namespace);
